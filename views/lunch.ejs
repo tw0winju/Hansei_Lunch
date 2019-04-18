@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <title>한세 급식</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                    <td>
+                        <h1>이번 달 급식</h1>
+                    </td>
+                    <% for(let sum of menu) {%>
+                        <% if (sum.lunch == "" ) { %>
+                            <tr> <td><%= sum.date %>일</td></tr>
+                            <tr><td>급식 없는 날</td></tr>
+                        <% } else { %>
+                        <tr> <td><%= sum.date %>일</td></tr>
+                            
+                        <td><pre><strong><%= sum.lunch %></strong></pre></td>
+                    
+                        <% } %>     
+                    <% } %>
+            </thead>           
+        </table>
+    </body>
+</html>

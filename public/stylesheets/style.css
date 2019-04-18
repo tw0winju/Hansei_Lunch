@@ -1,0 +1,24 @@
+body{
+    background-image: url(../images/hansei.jpg);
+}
+table {
+    border: 2px solid black;
+    background-color: white;
+    border-collapse: collapse;
+    margin-top:25px;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+td{
+    border: 1px solid black;
+    font-size: 20px;
+}
+thead{
+    white-space:nowrap;
+}
+h1{
+    text-align: center;
+}
