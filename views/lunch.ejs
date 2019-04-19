@@ -12,16 +12,17 @@
                     </td>
                     <% for(let sum of menu) {%>
                         <% if (sum.lunch == "" ) { %>
-                            <tr> <td><%= sum.date %>일</td></tr>
-                            <tr><td>급식 없는 날</td></tr>
-                        <% } else { %>
-                        <tr> <td><%= sum.date %>일</td></tr>
                             
+                        <% } else { %>
+                        <tr> <td><%= sum.date %>일 (<%= day[--sum.date % 7] %>) </td></tr>
                         <td><pre><strong><%= sum.lunch %></strong></pre></td>
                     
                         <% } %>     
                     <% } %>
-            </thead>           
+            </thead>    
+            <tbody>
+                
+            </tbody>       
         </table>
     </body>
 </html>
