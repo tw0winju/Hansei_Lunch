@@ -10,19 +10,20 @@
                     <td>
                         <h1>이번 달 급식</h1>
                     </td>
-                    <% for(let sum of menu) {%>
-                        <% if (sum.lunch == "" ) { %>
-                            
+
+                    <% for(let sum of menu) {%>    <!-- sum변수에 menu의 배열 요소 수만큼 1++씩 반복한다. -->
+
+                        <% if (sum.lunch == "" ) { %>   <!-- 급식 안 나오는 날을 제외하는 if문 -->
                         <% } else { %>
-                        <tr> <td><%= sum.date %>일 (<%= day[--sum.date % 7] %>) </td></tr>
-                        <td><pre><strong><%= sum.lunch %></strong></pre></td>
+
+                        <tr> <td><%= sum.date %>일 (<%= day[--sum.date % 7] %>) </td></tr>      <!-- 급식 나오는 날과 요일을 띄운다. -->
+
+                        <td><pre><strong><%= sum.lunch %></strong></pre></td>       <!-- 급식 메뉴를 띄운다. -->
                     
                         <% } %>     
                     <% } %>
+
             </thead>    
-            <tbody>
-                
-            </tbody>       
         </table>
     </body>
 </html>
