@@ -20,8 +20,8 @@ app.get('/', (req, res) => {          // 학교 급식 정보 가져오는 미�
     const data = JSON.parse(body);        // body로 받은 데이터를 json형식으로 파싱해서 data 변수에 저장
     const lunch = [];
     const date = [];
-    const day = ["월","화","수","목","금","토","일"];
-    
+    const day = ["수","목","금","토","일","월","화"];
+    const today = month.getDay();
     for(let i = 0; i < data.menu.length; i++) {         // 급식 데이터를 반복문써서 배열에 넣음
       lunch.push(data.menu[i].lunch); 
       date.push(data.menu[i].date);
@@ -31,7 +31,8 @@ app.get('/', (req, res) => {          // 학교 급식 정보 가져오는 미�
       lunch: lunch,
       date: date,
       menu: data.menu,
-      day: day
+      day: day,
+      today: today
     });
 
   });

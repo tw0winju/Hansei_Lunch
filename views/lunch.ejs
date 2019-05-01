@@ -14,7 +14,8 @@
                     <% for(let sum of menu) {%>    <!-- sum변수에 menu의 배열 요소 수만큼 1++씩 반복한다. -->
 
                         <% if (sum.lunch == "" ) { %>   <!-- 급식 안 나오는 날을 제외하는 if문 -->
-                        <% } else { %>
+                                
+                            <% } else  { %>
 
                         <tr> <td><%= sum.date %>일 (<%= day[--sum.date % 7] %>) </td></tr>      <!-- 급식 나오는 날과 요일을 띄운다. -->
 
@@ -22,6 +23,7 @@
                     
                         <% } %>     
                     <% } %>
+
 
             </thead>    
         </table>
